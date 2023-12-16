@@ -1,0 +1,124 @@
+markdown_extensions:
+    - admonition # 警告语法
+    - def_list
+    - footnotes
+    - abbr
+    - pymdownx.caret
+    - pymdownx.mark
+    - pymdownx.tilde
+    - md_in_html
+    - pymdownx.arithmatex: # latex支持
+          generic: true
+    - toc:
+          permalink: true # 固定标题位置为当前位置
+          toc_depth: 3 # 目录深度
+    
+    - attr_list
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.superfences: # 代码块中支持Mermaid
+          custom_fences: # 支持 Mermaid
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+          alternate_style: true
+          combine_header_slug: true
+    - pymdownx.tasklist:
+          custom_checkbox: true
+          clickable_checkbox: true
+    - meta # 支持Markdown文件上方自定义标题标签等
+    - tables
+
+
+
+# Project information
+site_name: Asia Park
+
+# Repository
+repo_name: sylvia-050729/asia-park
+repo_url: https://gitee.com/sylvia-050729/asia-park
+
+# Copyright
+copyright: Copyright &copy; 2023 yyx & wxy
+
+# Configuration
+theme:
+  name: material
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+        # 切换到亮色
+        - media: "(prefers-color-scheme: light)" # 根据系统的颜色模式自动切换
+          scheme: default
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/weather-night
+              name: 关灯
+
+        # 切换到暗色
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/weather-sunny
+              name: 开灯
+  icon:
+    logo: material/cat
+  language: zh
+
+
+
+
+
+
+# Page tree
+nav:
+  - 首页: index.md
+  - 搞搞创作: 
+        - 关于死亡: article.md
+        - 关于生病: article1.md
+  - 开发日志: book.md
+ 
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://gitee.com/sylvia-050729
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/198381075/video
+    - icon: material/email
+      link: https://www.lofter.com/front/blog/home-page/anmoudedengss
+
